@@ -7,7 +7,7 @@
 - 请求的返回体一律使用 *com.sanyau.repair.response* 中的Result类，关于Result的使用案例，请在 *com.sanyau.repair.controller.ExampleController* 查看
 
 ### 1. 如何clone本项目 （默认你已配置好git）
-- 使用``` git clone https://github.com/USY-repair/repair-backEnd.git``` 拿到本项目
+- 使用``` git clone git@github.com:USY-repair/repair-backEnd.git``` 拿到本项目
 - 使用IDEA打开，配置项目maven
 
 ### 2. 如何使用mybatis-plus代码生成器（在test下 *com.sanyau.repair.CodeGenerator*）
