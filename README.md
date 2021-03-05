@@ -1,11 +1,15 @@
 # repair-backEnd
 报修大分队
+## 开发规范
+- 在Controller中的每一个处理http的请求函数都加上 ***@ApiOperation*** 注解，用于备注这个请求用来干什么。示例：[***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
+- 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类
+- 分页查询的返回结果请参照 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 下的 ***examplePage*** 方法
+
 ## 须知
 - 为了避免发生不必要的错误，建议先将项目直接clone到本地
 - 部分使用条件查询的简单示例代码在 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
 - SwaggerUI地址：***http://localhost:8080/swagger-ui.html***
 - 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类，关于Result的使用案例，请查看 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
-
 ### 1. 如何clone本项目 （默认你已配置好git）
 - 使用```git clone git@github.com:USY-repair/repair-backEnd.git``` 拿到本项目
 - 使用IDEA打开，配置项目maven
@@ -31,9 +35,5 @@
 - 点击COMMIT按钮，将代码提交至本地仓库。
 - 点击VCS >> Git >> Push 将本地仓库提交至Github的远程仓库。
 - 至此，提交完成。
-## 开发规范
-- 在Controller中的每一个处理http的请求函数都加上 ***@ApiOperation*** 注解，用于备注这个请求用来干什么。示例：[***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
-- 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类
-- 分页查询的返回结果请参照 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 下的 ***examplePage*** 方法
 ## 建议
 - 建议每完成一次自己模块的功能后就进行一次提交，提交步骤参照 [如何提交自己的代码](#如何提交自己的代码)
