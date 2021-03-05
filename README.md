@@ -30,7 +30,7 @@
 - 在下方有一块编辑区，这个就是你提交文件时附带的备注信息，即上文所说的提交信息。
 - 点击COMMIT按钮，将代码提交至本地仓库。
 - 点击VCS >> Git >> Push 将本地仓库提交至Github的远程仓库。
-- 至此，提交完成
+- 至此，提交完成。
 ## 开发规范
 - 在Controller中的每一个处理http的请求函数都加上 ***@ApiOperation*** 注解，用于备注这个请求用来干什么。示例：[***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
 - 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类
