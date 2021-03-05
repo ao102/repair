@@ -15,6 +15,7 @@
 - 运行 ***com.sanyau.repair.CodeGenerator*** 中的main方法
 - 按提示填写生成代码位置的包名，这里直接填```repair```即可
 - 按提示填写需要生成的表，你需要填写的是new_repair数据库中的表名，多张表以逗号分隔
+- 表：*order,abnormal_order,material_info,return_material_info,repair_details,admin_role,student_info,master_info,delivery_material_info,repository*
 
 ### 3. <span id="如何提交自己的代码">如何提交自己的代码</span>
 #### 使用原生git提交
