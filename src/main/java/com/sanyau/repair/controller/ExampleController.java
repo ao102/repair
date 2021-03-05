@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sanyau.repair.entity.StudentInfo;
 import com.sanyau.repair.response.Result;
 import com.sanyau.repair.service.impl.StudentInfoServiceImpl;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,7 @@ public class ExampleController {
     @Autowired
     StudentInfoServiceImpl studentInfoService;
 
+    @ApiOperation(value = "根据Id查找学生")
     @PostMapping("findById")
     public Result findById(@RequestParam("id") String id) {
         /* 创建StudentInfo的条件查询类 */
@@ -31,6 +33,7 @@ public class ExampleController {
         return Result.ok().data("info", info);
     }
 
+    @ApiOperation(value = "添加学生")
     @PostMapping("inset")
     public Result exampleInsert(@RequestBody StudentInfo user) {
         /* 偷懒不写验证了 */
