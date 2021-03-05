@@ -33,6 +33,6 @@
 - 至此，提交完成
 ## 开发规范
 - 在Controller中的每一个处理http的请求函数都加上 ***@ApiOperation*** 注解，用于备注这个请求用来干什么。示例：[***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
-
+- 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类
 ## 建议
 - 建议每完成一次自己模块的功能后就进行一次提交，提交步骤参照 [如何提交自己的代码](#如何提交自己的代码)
