@@ -3,6 +3,7 @@ package com.sanyau.repair.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sanyau.repair.entity.StudentInfo;
+import com.sanyau.repair.mapper.StudentInfoMapper;
 import com.sanyau.repair.response.Result;
 import com.sanyau.repair.service.impl.StudentInfoServiceImpl;
 import io.swagger.annotations.ApiOperation;
@@ -48,19 +49,31 @@ public class ExampleController {
     @ApiOperation("分页查询")
     @GetMapping("pageStudent")
     public Result examplePage(@ApiParam(name = "current", value = "当前页", required = true) @RequestParam("current") Long current,
-                              @ApiParam(name = "limit", value = "每页数据量", required = true) @RequestParam("limit") Long limit){
+                              @ApiParam(name = "limit", value = "每页数据量", required = true) @RequestParam("limit") Long limit) {
         //创建page对象
         /* current: 当前页  size:每页显示size条数据*/
-        Page<StudentInfo> page = new Page<>(current,limit);
+        Page<StudentInfo> page = new Page<>(current, limit);
         //调用方法实现分页
         //调用方法的时候，底层做了封装，把分页所有数据封装到page对象里面
         //queryWrapper为查询条件，填null即为全部查找
-        studentInfoService.page(page,null);
+        studentInfoService.page(page, null);
         long total = page.getTotal();//总记录数
         List<StudentInfo> records = page.getRecords();//数据list集合
         HashMap<String, Object> map = new HashMap<>();
         map.put("total", total);
         map.put("rows", records);
         return Result.ok().data(map);
+    }
+
+    /* 使用mapper案例 */
+    @ApiOperation("使用mapper根据id查找学生")
+    @GetMapping("findByIdFromMapper")
+    public Result findByIdFromMapper(@RequestParam("id") String id) {
+        /* 用service拿到mapper */
+        StudentInfoMapper studentInfoMapper = studentInfoService.getBaseMapper();
+        QueryWrapper<StudentInfo> wrapper = new QueryWrapper<>();
+        wrapper.eq("id", id);
+        StudentInfo info = studentInfoMapper.selectOne(wrapper);
+        return Result.ok().data("info", info);
     }
 }
