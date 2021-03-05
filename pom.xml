@@ -24,6 +24,7 @@
         <swagger-annotations.version>1.5.22</swagger-annotations.version>
         <swagger-models.version>1.5.22</swagger-models.version>
         <mysql-connector.version>5.1.9</mysql-connector.version>
+        <jjwt.version>0.7.0</jjwt.version>
     </properties>
     <dependencies>
         <dependency>
@@ -96,7 +97,14 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-<!--            <version>${mysql-connector.version}</version>-->
+            <version>${mysql-connector.version}</version>
+        </dependency>
+
+        <!--        JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
         </dependency>
     </dependencies>
 
