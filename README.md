@@ -10,6 +10,8 @@
 - 部分使用条件查询的简单示例代码在 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
 - SwaggerUI地址：***http://localhost:8080/swagger-ui.html***
 - 请求的返回体一律使用 [***com.sanyau.repair.response.Result***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/response/Result.java) 类，关于Result的使用案例，请查看 [***com.sanyau.repair.controller.ExampleController***](https://github.com/USY-repair/repair-backEnd/blob/master/src/main/java/com/sanyau/repair/controller/ExampleController.java) 
+- 若你已经clone了本项目，现在想从github的本项目中更新本地的代码，可以使用在项目里使用此命令``` git pull origin master ```来重新拉取项目的远程仓库代码到本地仓库
+- 每一次push代码到远程仓库，本地仓库和远程仓库的代码都会自动同步。
 ### 1. 如何clone本项目 （默认你已配置好git）
 - 使用```git clone git@github.com:USY-repair/repair-backEnd.git``` 拿到本项目
 - 使用IDEA打开，配置项目maven
