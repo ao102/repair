@@ -25,6 +25,7 @@
         <swagger-models.version>1.5.22</swagger-models.version>
         <mysql-connector.version>5.1.9</mysql-connector.version>
         <jjwt.version>0.7.0</jjwt.version>
+        <JSONObject.version>1.2.28</JSONObject.version>
     </properties>
     <dependencies>
         <dependency>
@@ -106,7 +107,16 @@
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
         </dependency>
+
+        <!--    JSONObject-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${JSONObject.version}</version>
+        </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
