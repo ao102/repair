@@ -1,11 +1,10 @@
 package com.sanyau.repair.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -31,6 +30,7 @@ public class AbnormalOrder implements Serializable {
 
     private String orderId;
 
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     private Date returnTime;
